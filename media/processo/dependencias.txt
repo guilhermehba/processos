@@ -1,0 +1,10 @@
+#Instala a versão mais recente do django no computador
+    pip install django
+
+#Instala a versão mais recente do cleanup no computador
+    pip install django-cleanup
+
+#Instala a versão mais recente do MySQL client
+    pip install mysqlclient
+
+#

@@ -1,0 +1,86 @@
+ 
+ 
+#Atualiza a versão do django no computador
+pip install --upgrade django==3.2
+
+#Para criar o projeto
+django-admin startproject "nome do projeto" .
+
+#Para rodar o server
+python manage.py runserver
+
+#Para rodar o migrate
+python manage.py migrate
+
+#Para criar o super usuário
+python manage.py createsuperuser
+
+#Para criar a pasta dos arquivos do projeto
+
+python manage.py startapp app
+
+#Para adicionar uma nova model no banco de dados
+python manage.py makemigrations
+python manage.py migrate
+
+# Recopila os arquivos estáticos
+python manage.py collectstatic 
+
+# Eu tive que adicionar esta linha ao settings.py para fazê-lo funcionar (caso contrário, ele mostrava um erro quando acessado de outro computador)
+ALLOWED_HOSTS = ['*']
+
+# Digite no cmd
+python manage.py runserver 0.0.0.0:9595
+
+# Adiciona na tabela do banco de dados registro no formato Json
+python .\manage.py loaddata sigtap/sql/tb_cid.json
+
+
+# Módulos necessários
+
+pip install django-cleanup
+
+INSTALLED_APPS = (
+     ...
+    'django_cleanup', # should go after your apps
+)
+
+pip install python-decouple==3.1
+
+pip install django-cleanup
+
+pip install mysql-python
+pip install mysqlclient
+apt-get install python3-mysqldb libmysqlclient-dev python-dev
+
+
+
+# Converter Firebird para mysql
+#Ferramenta Paga limit 10MB
+https://www.rebasedata.com/convert-fdb-to-mysql-online
+
+java -jar client-0.0.5.jar convert --output-format=mysql database.fdb output-dir/
+
+
+#Conectar com o banco de dados Firebird
+#Modulo: 
+    pip install firebirdsql
+
+https://pypi.org/project/firebirdsql/
+Obs: Somente esse módulo funcionou com a versão do postgree do 
+
+# Modulo do mariadb para as rotinas do cron
+pip3 install mysql-connector-python
+
+
+
+#Deploy manual do repositorio
+
+#Criar pasta
+sudo mkdir "nome da pasta"
+
+#iniciar o repositorio
+sudo git init --bare
+
+# Copia os arquivos
+sudo git pull /srv/repository/sisfat.git/ master
